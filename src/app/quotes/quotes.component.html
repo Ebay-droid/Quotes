@@ -1,0 +1,20 @@
+<div class="container">
+    <p>My Quotes</p>
+
+    <div class="row">
+        <div class="col-md-6">
+          <ul>
+            <li *ngFor='let quote of quotes; let i =index'>{{quote.quote}}
+              <app-quote-detail [quote]='quote'(toDelete) = 'deleteQuote($event, i)'> </app-quote-detail>
+              <p>created on {{quote.created|date}}</p>
+              <app-votes></app-votes>
+            </li> 
+          </ul>
+        </div>
+    
+        <div class="col-md-6">
+          <app-quote-form></app-quote-form>
+        </div>
+    
+    </div>
+</div>
