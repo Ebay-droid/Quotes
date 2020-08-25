@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-6 ">
           <ul>
-            <li class="card quote" *ngFor='let quote of quotes; let i =index'>{{quote.quote}}
+            <li  class="card quote" *ngFor='let quote of quotes; let i =index'>{{quote.quote}}
               <button (click)='viewDetails(i)' class="btn btn-outline-primary">View Details</button>
               <app-quote-detail *ngIf='quote.showDetails' [quote]='quote'(toDelete) = 'deleteQuote($event, i)'> </app-quote-detail>
              

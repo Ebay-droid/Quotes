@@ -2,4 +2,5 @@
 <button (click)='quoteDelete(true)' class="btn btn-outline-danger">Delete</button>
 <br><br>
 <app-votes></app-votes>
-<p>created on {{quote.created|date}}</p>
+<p>created on {{quote.created | date : "short"}} </p><br>
+<p>Time elapsed in days : {{quote.created | dateCount}}</p>
